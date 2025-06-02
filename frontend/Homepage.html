@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="Homepage.css">
+       <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+</head>
+<body>
+    <header>
+<a href="Homepage.html" class="logo"> Bags Store</a>
+          <nav>
+      <a href="Homepage.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="order.html">My Order</a>
+      <a href="login&Register/login.html">Logout</a>
+
+    </nav>
+  </header>
+    <!-- Hero Section -->
+    <section class="hero fade-element">
+        <div class="hero-content">
+            <h1>Latest Bag Collections for Everyone</h1>
+            <p>Stylish and practical bags for men, women, and kids</p>
+            <button onclick="shopNow()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category-section fade-element">
+        <h2>Choose by Category</h2>
+        <div class="categories">
+            <div class="category fade-element">
+                <a href="products.html#womens-bags">
+                    <img src="./images/img 5.avif" alt="Women's Bags" />
+                    <h3>Women's Bags</h3>
+                </a>
+            </div>
+            <div class="category fade-element">
+                <a href="products.html#mens-bags">
+                    <img src="./images/img 4.jpg" alt="Men's Bags" />
+                    <h3>Men's Bags</h3>
+                </a>
+            </div>
+            <div class="category fade-element">
+                <a href="products.html#kids-bags">
+                    <img src="./images/img 3.webp" alt="Kids' Bags" />
+                    <h3>Kids' Bags</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section fade-element">
+        <h2>Featured Products</h2>
+        <div class="featured-products">
+            <div class="product-card fade-element">
+                <img src="./images/img 2.webp" alt="Classic Leather Bag">
+                <h3>Classic Leather Bag</h3>
+                <p>30JD</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card fade-element">
+                <img src="./images/img 1.webp" alt="Elegant Women's Bag">
+                <h3>Elegant Women's Bag</h3>
+                <p>40JD</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card fade-element">
+                <img src="./images/img 6.avif" alt="Casual Backpack">
+                <h3>Casual Backpack</h3>
+                <p>20JD</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Bags Store</h3>
+        <p>Discover stylish, durable, and trendy bags for every occasion.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: info@bagsstore.com</p>
+        <p>Phone: +962 7 1234 5678</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Bags Store | All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script src="Homepage.js"></script>
+    <button id="scrollTopBtn" title="Go to top" style="display:none; position:fixed; bottom:20px; right:20px; z-index:1000; padding:10px 15px; font-size:18px; cursor:pointer;">↑</button>
+
+</body>
+</html>

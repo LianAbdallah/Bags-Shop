@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bags Store - Products</title>
+  <link rel="stylesheet" href="products.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+</head>
+<body>
+
+  <!-- Header with Navbar -->
+  <header>
+    <a href="Homepage.html" class="logo">Bags Store</a>
+    <nav>
+      <a href="Homepage.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="order.html">My Order</a>
+      <a href="login&Register/login.html">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Women's Bags Section -->
+<section class="product-section" id="womens-bags">
+  <h2>Women's Bags</h2>
+  <div class="product-list" id="women-container"></div>
+</section>
+
+<section class="product-section" id="mens-bags">
+  <h2>Men's Bags</h2>
+  <div class="product-list" id="men-container"></div>
+</section>
+
+<section class="product-section" id="kids-bags">
+  <h2>Kids' Bags</h2>
+  <div class="product-list" id="kids-container"></div>
+</section>
+
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImage" src="" alt="Product" />
+    <h2 id="modalTitle"></h2>
+    <p id="modalPrice"></p>
+    <p id="modalDescription"></p>
+    <!-- <button class="add-to-cart">Add to Cart</button> -->
+    <a href="cart.html" id="addToCartBtn" class="add-to-cart">Add to Cart</a>
+     <!-- <a href="products.html" class="add-to-cart" id="addToCartBtn">Add to Cart</a> -->
+
+  </div>
+</div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Bags Store</h3>
+        <p>Discover stylish, durable, and trendy bags for every occasion.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: info@bagsstore.com</p>
+        <p>Phone: +962 7 1234 5678</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Bags Store | All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+</body>
+</html>
+

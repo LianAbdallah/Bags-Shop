@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Orders</title>
+  <link rel="stylesheet" href="Orders.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+ <aside class="sidebar">
+    <ul class="sidebar-menu">
+      <li><a href="../admain/Orders.html"><i class="fas fa-clipboard-list"></i> Orders</a></li>
+      <li><a href="../admain/ManageProducts.html"><i class="fas fa-box"></i> Products</a></li>
+      <li><a href="../login&Register/login.html" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+  </aside>
+  <div class="container">
+    <h1> All Orders</h1>
+
+    <div class="table-wrapper">
+      <table id="ordersTable">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>User Name</th>
+            <th>User Email</th>
+            <th>Products Count</th>
+            <th>Total Amount</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Orders will be inserted dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <div id="orderDetails" class="order-details">
+      <h2>🧾 Order Details</h2>
+      <p><strong>Order ID:</strong> <span id="detailOrderId"></span></p>
+      <p><strong>User Name:</strong> <span id="detailUserName"></span></p>
+      <p><strong>User Email:</strong> <span id="detailUserEmail"></span></p>
+      <p><strong>Total Amount:</strong> $<span id="detailTotal"></span></p>
+      <h3>Products:</h3>
+      <ul id="detailProducts"></ul>
+      <button class="btn-close" onclick="closeDetails()">Close</button>
+    </div>
+  </div>
+
+  <script src="Orders.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Registration Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Login form -->
+    <div id="login-form">
+        <h2>Login</h2>
+        <div id="error-message-sign" class="hidden"></div>
+        <div class="form-group">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <i class="input-icon fas fa-at"></i>
+        </div>
+        <div class="form-group">
+            <input type="password" id="login-password" placeholder="Password" required>
+            <i class="input-icon fas fa-lock"></i>
+        </div>
+        <button id="login-btn">Login</button>
+        <div class="links">
+            <a onclick="showForm('signup-form')">Create New Account</a>
+        </div>
+    </div>
+    
+    <!-- Sign up form -->
+    <div id="signup-form" class="hidden">
+        <h2>Sign Up</h2>
+        <div id="signup-success-message" class="hidden"></div>
+        <div id="error-message-reg" class="hidden"></div>
+        <div class="form-group">
+            <input type="text" id="full-name" placeholder="Full Name" required>
+            <i class="input-icon fas fa-user"></i>
+        </div>
+        <div class="form-group">
+            <input type="text" id="username" placeholder="Username" required>
+            <i class="input-icon fas fa-user-circle"></i>
+        </div>
+        <div class="form-group">
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <i class="input-icon fas fa-at"></i>
+        </div>
+        <div class="form-group">
+            <input type="tel" id="phone-number" placeholder="Phone Number">
+            <i class="input-icon fas fa-phone"></i>
+        </div>
+        <div class="form-group">
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <i class="input-icon fas fa-lock"></i>
+        </div>
+        <div class="form-group">
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <i class="input-icon fas fa-lock"></i>
+        </div>
+        <button id="signup-btn">Create Account</button>
+        <div class="links">
+            <a onclick="showForm('login-form')">Back to Login</a>
+        </div>
+    </div>
+
+    <!-- Forgot password form -->
+    <div id="forgot-password-form" class="hidden">
+        <h2>Forgot Password?</h2>
+        <div id="forgot-password-message" class="hidden"></div>
+        <div class="form-group">
+            <input type="email" id="forgot-password-email" placeholder="Enter your email" required>
+        </div>
+        <a onclick="showForm('login-form')">Back to Login</a>
+    </div>
+  </div>
+
+  <!-- ✅ مكتبة jwt-decode يجب أن تُضاف قبل login.js -->
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

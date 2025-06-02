@@ -1,0 +1,160 @@
+* {
+      margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f4f6f9;
+      display: flex;
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 250px;
+      background: #2c3e50;
+      color: #fff;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar-menu {
+      list-style: none;
+    }
+    .sidebar-menu li {
+      margin-bottom: 20px;
+    }
+    .sidebar-menu a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .sidebar-menu a:hover {
+      background: #2c3e50;
+    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Table Section */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  background-color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+thead {
+  background-color: #2c3e50;
+  color: white;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+  transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+  background-color: #f9fcff;
+}
+
+button {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #2c80b4;
+}
+
+/* Order Details Box */
+.order-details {
+  display: none;
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.order-details h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.order-details p strong {
+  color: #2c3e50;
+}
+
+.order-details ul {
+  padding-left: 20px;
+  color: #34495e;
+  margin-top: 10px;
+}
+
+/* Close Button */
+.btn-close {
+  background-color: #e74c3c;
+  margin-top: 20px;
+}
+
+.btn-close:hover {
+  background-color: #c0392b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  th, td {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .order-details {
+    padding: 20px;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}

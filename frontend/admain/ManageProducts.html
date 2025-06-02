@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Dashboard</title>
+  <link rel="stylesheet" href="ManageProducts.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <ul class="sidebar-menu">
+      <li><a href="../admain/Orders.html"><i class="fas fa-clipboard-list"></i> Orders</a></li>
+      <li><a href="../admain/ManageProducts.html"><i class="fas fa-box"></i> Products</a></li>
+      <li><a href="../login&Register/login.html" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+  </aside>
+
+  <div class="main-content">
+    <h1>Products</h1>
+
+    <div class="category-tabs">
+      <button onclick="filterProducts('all', this)" class="active">All</button>
+      <button onclick="filterProducts('women', this)">Women</button>
+      <button onclick="filterProducts('men', this)">Men</button>
+      <button onclick="filterProducts('kids', this)">Kids</button>
+    </div>
+
+    <button id="openAddProductModal">Add New Product</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Image</th>
+          <th>Actions</th> <!-- عمود الأزرار -->
+        </tr>
+      </thead>
+      <tbody id="productTableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- مودال الإضافة -->
+  <div id="addProductModal" class="modal">
+    <div class="modal-content">
+      <span id="closeAddProductModal">&times;</span>
+      <h3>Add Product</h3>
+      <form id="addProductForm" enctype="multipart/form-data">
+        <label for="productName">Name:</label><br />
+        <input type="text" id="productName" required /><br />
+
+        <label for="productPrice">Price:</label><br />
+        <input type="number" id="productPrice" min="0" required /><br />
+
+        <label for="productCategory">Category:</label><br />
+        <select id="productCategory" required>
+          <option value="women">Women</option>
+          <option value="men">Men</option>
+          <option value="kids">Kids</option>
+        </select><br />
+
+        <label for="productDescription">Description:</label><br />
+        <textarea id="productDescription" required></textarea><br />
+
+        <label for="productImageFile">Product Image:</label><br />
+        <input type="file" id="productImageFile" accept="image/*" required /><br /><br />
+
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- مودال التعديل -->
+  <div id="editProductModal" class="modal">
+    <div class="modal-content">
+      <span id="closeEditProductModal">&times;</span>
+      <h3>Edit Product</h3>
+      <form id="editProductForm" enctype="multipart/form-data">
+        <input type="hidden" id="editProductId" />
+        <label for="editProductName">Name:</label><br />
+        <input type="text" id="editProductName" required /><br />
+
+        <label for="editProductPrice">Price:</label><br />
+        <input type="number" id="editProductPrice" min="0" required /><br />
+
+        <label for="editProductCategory">Category:</label><br />
+        <select id="editProductCategory" required>
+          <option value="women">Women</option>
+          <option value="men">Men</option>
+          <option value="kids">Kids</option>
+        </select><br />
+
+        <label for="editProductDescription">Description:</label><br />
+        <textarea id="editProductDescription" required></textarea><br />
+
+        <label for="editProductImageFile">Product Image: (leave empty to keep current)</label><br />
+        <input type="file" id="editProductImageFile" accept="image/*" /><br /><br />
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="confirmDeleteModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to delete this product?</p>
+      <div style="text-align: right;">
+        <button id="confirmDeleteBtn" style="margin-right: 10px;">Yes</button>
+        <button id="cancelDeleteBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="ManageProducts.js"></script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Dashboard</title>
+  <link rel="stylesheet" href="ManageProducts.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+
+  <aside class="sidebar">
+    <ul class="sidebar-menu">
+      <li><a href="../admain/Orders.html"><i class="fas fa-clipboard-list"></i> Orders</a></li>
+      <li><a href="../admain/ManageProducts.html"><i class="fas fa-box"></i> Products</a></li>
+      <li><a href="../login&Register/login.html" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+  </aside>
+
+  <div class="main-content">
+    <h1>Products</h1>
+
+    <div class="category-tabs">
+      <button onclick="filterProducts('all', this)" class="active">All</button>
+      <button onclick="filterProducts('women', this)">Women</button>
+      <button onclick="filterProducts('men', this)">Men</button>
+      <button onclick="filterProducts('kids', this)">Kids</button>
+    </div>
+
+    <button id="openAddProductModal">Add New Product</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Image</th>
+          <th>Actions</th> <!-- عمود الأزرار -->
+        </tr>
+      </thead>
+      <tbody id="productTableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- مودال الإضافة -->
+  <div id="addProductModal" class="modal">
+    <div class="modal-content">
+      <span id="closeAddProductModal">&times;</span>
+      <h3>Add Product</h3>
+      <form id="addProductForm">
+        <label for="productName">Name:</label><br />
+        <input type="text" id="productName" required /><br />
+
+        <label for="productPrice">Price:</label><br />
+        <input type="number" id="productPrice" min="0" required /><br />
+
+        <label for="productCategory">Category:</label><br />
+        <select id="productCategory" required>
+          <option value="women">Women</option>
+          <option value="men">Men</option>
+          <option value="kids">Kids</option>
+        </select><br />
+
+        <label for="productDescription">Description:</label><br />
+        <textarea id="productDescription" required></textarea><br />
+
+        <label for="productImage">Image URL:</label><br />
+        <input type="text" id="productImage" required /><br /><br />
+
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- مودال التعديل -->
+  <div id="editProductModal" class="modal">
+    <div class="modal-content">
+      <span id="closeEditProductModal">&times;</span>
+      <h3>Edit Product</h3>
+      <form id="editProductForm">
+        <label for="editProductName">Name:</label><br />
+        <input type="text" id="editProductName" required /><br />
+
+        <label for="editProductPrice">Price:</label><br />
+        <input type="number" id="editProductPrice" min="0" required /><br />
+
+        <label for="editProductCategory">Category:</label><br />
+        <select id="editProductCategory" required>
+          <option value="women">Women</option>
+          <option value="men">Men</option>
+          <option value="kids">Kids</option>
+        </select><br />
+
+        <label for="editProductDescription">Description:</label><br />
+        <textarea id="editProductDescription" required></textarea><br />
+
+        <label for="editProductImage">Image URL:</label><br />
+        <input type="text" id="editProductImage" required /><br /><br />
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+<div id="confirmDeleteModal" class="modal">
+  <div class="modal-content">
+    <p>Are you sure you want to delete this product?</p>
+    <div style="text-align: right;">
+      <button id="confirmDeleteBtn" style="margin-right: 10px;">Yes</button>
+      <button id="cancelDeleteBtn">Cancel</button>
+    </div>
+  </div>
+</div>
+  <script src="ManageProducts.js"></script>
+</body>
+</html> -->
+
+

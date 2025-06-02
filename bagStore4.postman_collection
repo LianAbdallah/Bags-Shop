@@ -1,0 +1,576 @@
+{
+	"info": {
+		"_postman_id": "c5f6726c-3cb0-465c-b48a-ede98b18197a",
+		"name": "bagStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40790269"
+	},
+	"item": [
+		{
+			"name": "productUser",
+			"item": [
+				{
+					"name": "getAllbag",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvdG9AZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpZCI6IjY4MzllZDJjY2U0NjFlYTQ4YjJhY2FmYyIsImlhdCI6MTc0ODYzMDI0NywiZXhwIjoxNzUxMjIyMjQ3fQ.YMD06-bb-EDXty0Gs947sp15xhZiK6IzjyytklwDJsA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/productUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"productUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orderUser",
+			"item": [
+				{
+					"name": "orderFromCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhcmFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpZCI6IjY4MzY0Y2E0NTJhYWQwZTkxYmVlNmJjZiIsImlhdCI6MTc0ODY1NDc4OCwiZXhwIjoxNzUxMjQ2Nzg4fQ.1-g5fHDzppj9_w9lyEtN8rRTgQwhNwqvviJd7-tFt7w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/orderUser/orders/from-cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"orderUser",
+								"orders",
+								"from-cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhcmFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpZCI6IjY4MzY0Y2E0NTJhYWQwZTkxYmVlNmJjZiIsImlhdCI6MTc0ODY1NDc4OCwiZXhwIjoxNzUxMjQ2Nzg4fQ.1-g5fHDzppj9_w9lyEtN8rRTgQwhNwqvviJd7-tFt7w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/orderUser/user-orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"orderUser",
+								"user-orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cartUser",
+			"item": [
+				{
+					"name": "addCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvdG9AZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpZCI6IjY4MzllZDJjY2U0NjFlYTQ4YjJhY2FmYyIsImlhdCI6MTc0ODYzMDI0NywiZXhwIjoxNzUxMjIyMjQ3fQ.YMD06-bb-EDXty0Gs947sp15xhZiK6IzjyytklwDJsA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"68364ca452aad0e91bee6bcf\",\r\n  \"products\": [\r\n    {\r\n      \"productId\": \"6834d8a163c47a5b18616b4e\",\r\n      \"quantity\": 1\r\n    }\r\n\r\n  ],\r\n  \"paymentMethod\": \"cash\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cartUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cartUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvdG9AZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpZCI6IjY4MzllZDJjY2U0NjFlYTQ4YjJhY2FmYyIsImlhdCI6MTc0ODYzMDI0NywiZXhwIjoxNzUxMjIyMjQ3fQ.YMD06-bb-EDXty0Gs947sp15xhZiK6IzjyytklwDJsA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cartUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cartUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhcmFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpZCI6IjY4MzY0Y2E0NTJhYWQwZTkxYmVlNmJjZiIsImlhdCI6MTc0ODY1NDc4OCwiZXhwIjoxNzUxMjQ2Nzg4fQ.1-g5fHDzppj9_w9lyEtN8rRTgQwhNwqvviJd7-tFt7w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"68364ca452aad0e91bee6bcf\",\r\n  \"productId\": \"682242a55f7fd6475198cc1f\",\r\n  \"quantity\": 1\r\n}\r\n// {\r\n//   \"products\": [\r\n//     {\r\n//       \"productId\": \"PRODUCT_ID_1\",\r\n//       \"quantity\": 1\r\n//     }\r\n//     // {\r\n//     //   \"productId\": \"PRODUCT_ID_2\",\r\n//     //   \"quantity\": 1\r\n//     // }\r\n//   ],\r\n//   \"paymentMethod\": \"cash\"\r\n// }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cartUser/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cartUser",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhcmFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpZCI6IjY4MzY0Y2E0NTJhYWQwZTkxYmVlNmJjZiIsImlhdCI6MTc0ODY1NDc4OCwiZXhwIjoxNzUxMjQ2Nzg4fQ.1-g5fHDzppj9_w9lyEtN8rRTgQwhNwqvviJd7-tFt7w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cartUser/683a60a3285cbb7ef2434a09/6834d8a163c47a5b18616b4e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cartUser",
+								"683a60a3285cbb7ef2434a09",
+								"6834d8a163c47a5b18616b4e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// admin\r\n{\r\n    \"email\":\"tasneem@gmail.com\",\r\n    \"password\":\"password12\"\r\n}\r\n\r\n// user\r\n// {\r\n//     \"email\":\"nada@gmail.com\",\r\n//     \"password\":\"password12\"\r\n// }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"lian@gmail.com\",\r\n    \"fullName\":\"lian arafeh\",\r\n    \"username\":\"tasneem98\",\r\n    \"password\":\"password12\",\r\n    \"phone\":\"+962 8774\",\r\n    \"role\":\"admin\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AdminDashboardBag",
+			"item": [
+				{
+					"name": "productAdmin",
+					"item": [
+						{
+							"name": "addBag",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhc25lZW1AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWQiOiI2ODI3NWUzNDZiNDgwYzZlZTJhMDZmOWEiLCJpYXQiOjE3NDg2NTY1ODAsImV4cCI6MTc1MTI0ODU4MH0.4Mv1cDkNMcrdGIkQ3G8qLrk2lXt7Y1QVPUWjUGT6yHo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"bag purple\",\r\n    \"description\": \"new bag\",\r\n    \"price\": 50,\r\n    \"category\": \"women\",\r\n    \"image\": \"http://localhost:5000/uploads/Womens_Bags3.jpg\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/productAdmin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"productAdmin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteBagById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhc25lZW1AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWQiOiI2ODI3NWUzNDZiNDgwYzZlZTJhMDZmOWEiLCJpYXQiOjE3NDg2NTY1ODAsImV4cCI6MTc1MTI0ODU4MH0.4Mv1cDkNMcrdGIkQ3G8qLrk2lXt7Y1QVPUWjUGT6yHo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"nedal@gmail.com\",\r\n  \"password\": \"Panzer123qwe\"\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:5000/productAdmin/68373cc46c669d9552d210ff",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"productAdmin",
+										"68373cc46c669d9552d210ff"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatebag",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhc25lZW1AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWQiOiI2ODI3NWUzNDZiNDgwYzZlZTJhMDZmOWEiLCJpYXQiOjE3NDg2NTY1ODAsImV4cCI6MTc1MTI0ODU4MH0.4Mv1cDkNMcrdGIkQ3G8qLrk2lXt7Y1QVPUWjUGT6yHo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"price\":300\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/productAdmin/683a4aefaae75b8ebf5d8bbb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"productAdmin",
+										"683a4aefaae75b8ebf5d8bbb"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllbag",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhc25lZW1AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWQiOiI2ODI3NWUzNDZiNDgwYzZlZTJhMDZmOWEiLCJpYXQiOjE3NDg2NTY1ODAsImV4cCI6MTc1MTI0ODU4MH0.4Mv1cDkNMcrdGIkQ3G8qLrk2lXt7Y1QVPUWjUGT6yHo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/productAdmin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"productAdmin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getbagById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhc25lZW1AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWQiOiI2ODI3NWUzNDZiNDgwYzZlZTJhMDZmOWEiLCJpYXQiOjE3NDg2NTY1ODAsImV4cCI6MTc1MTI0ODU4MH0.4Mv1cDkNMcrdGIkQ3G8qLrk2lXt7Y1QVPUWjUGT6yHo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/productAdmin/683a4aefaae75b8ebf5d8bbb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"productAdmin",
+										"683a4aefaae75b8ebf5d8bbb"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "orderAdmin",
+					"item": [
+						{
+							"name": "getAllOrder",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhc25lZW1AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWQiOiI2ODI3NWUzNDZiNDgwYzZlZTJhMDZmOWEiLCJpYXQiOjE3NDg2NTY1ODAsImV4cCI6MTc1MTI0ODU4MH0.4Mv1cDkNMcrdGIkQ3G8qLrk2lXt7Y1QVPUWjUGT6yHo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userId\": \"6824ee12b14ff09c2fa9c1c5\",\r\n  \"products\": [\r\n    {\r\n      \"productId\": \"6824f7ed07e1cdf47d484ff0\",\r\n      \"quantity\": 2\r\n    }\r\n  ],\r\n  \"paymentMethod\": \"cash\"\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:5000/orderAdmin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"orderAdmin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
